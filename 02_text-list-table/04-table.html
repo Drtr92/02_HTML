@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>04. Table</title>
+    <!-- 브라우저는 기본적으로 표에 테두리가 표현이 안됨 -->
+    <style>
+        table {
+            border-collapse: collapse;
+            margin-bottom: 24px;
+        }
+
+        th,
+        td {
+            border: 1px solid #94a3b8;
+            padding: 6px 16px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<table> <!-- 게시판을 만들때 많이 쓰기도 한대요 -->
+    <thead> <!-- 여기엔 td 를 쓰면 안돼요! -->
+        <tr>
+            <th>이름</th>
+            <th>나이</th>
+            <th>전화번호</th>
+        </tr>
+    </thead>
+
+    <tbody> <!-- 여기엔 th 를 쓰면 안돼요! -->
+        <tr>
+            <td>홍길동</td>
+            <td>20</td>
+            <td>010-1234-5678</td>
+        </tr>
+        <tr>
+            <td>김철수</td>
+            <td>25</td>
+            <td>010-8765-4321</td>
+        </tr>
+    </tbody>
+</table>
+
+<table>
+    <!--
+    span = 확장
+    column = 열, 아래로 내려오는 세로줄
+
+    원래는 <thead> 영역이 있는게 정상적인 테이블 입니다.
+    아래 두 예시는 각 병합의 단순한 예시를 위해
+    <thead>를 생략 하였습니다.
+    -->
+    <tr>
+        <td colspan="3">열 병합</td>
+    </tr>
+    <tr>
+        <td>내용2</td>
+        <td>내용3</td>
+        <td>내용4</td>
+    </tr>
+</table>
+
+<table>
+    <!--
+     row = 행
+     -->
+    <tr>
+        <td rowspan="3">행 병합</td>
+        <td>내용2</td>
+        <td>내용3</td>
+    </tr>
+    <tr>
+        <td>내용4</td>
+        <td>내용5</td>
+    </tr>
+    <tr>
+        <td>내용6</td>
+        <td>내용7</td>
+    </tr>
+</table>
+
+<h2>colspan : 열 병합 (옆으로 합치기)</h2>
+<table>
+    <tbody>
+    <tr>
+        <td colspan="2">열 병합</td>
+        <td>얘는 따로</td>
+    </tr>
+    <tr>
+        <td>내용2</td>
+        <td>내용3</td>
+        <td>내용4</td>
+    </tr>
+    </tbody>
+</table>
+
+<h2>rowspan : 행 병합 (아래로 합치기)</h2>
+<table>
+    <tbody>
+    <tr>
+        <td>내용1</td>
+        <td>내용2</td>
+        <td rowspan="3">내용6</td>
+    </tr>
+    <tr>
+        <td>내용3</td>
+        <td rowspan="2">내용5</td>
+    </tr>
+    <tr>
+        <td>내용4</td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
